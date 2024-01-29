@@ -1,0 +1,380 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Bebas Neue";
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.nav {
+  position: fixed;
+  min-width: 100%;
+  background-color: #fff;
+  z-index: 100;
+}
+.nav__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.nav__logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nav__logo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 315px;
+}
+.nav__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #333;
+}
+.nav__icons__element {
+  margin-right: 1em;
+  padding: 0.5em;
+  font-size: 3.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+.nav__icons__element-hide {
+  display: none;
+}
+.nav__menu {
+  position: absolute;
+  top: 194px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 194px);
+  background-color: #333;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+}
+.nav__menu-active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.nav__menu__item {
+  margin: 0.8em;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+.nav__menu__item:hover {
+  color: #333;
+}
+
+.header {
+  position: relative;
+  padding-top: 19.4rem;
+}
+.header__title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  width: 100%;
+  background-image: url(../img/header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header__title h2 {
+  color: #fff;
+  font-size: 4rem;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.header__title::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 200px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.header__text p {
+  margin: 1em;
+  font-size: 1.8rem;
+}
+
+.oferts__title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  width: 100%;
+  background-image: url(../img/oferts.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.oferts__title h2 {
+  color: #fff;
+  font-size: 4rem;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.oferts__title::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 200px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.oferts__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.oferts__cards__element__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.oferts__cards__element__title h3 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #333;
+}
+.oferts__cards__element__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.oferts__cards__element__text p {
+  margin: 1em;
+  font-size: 1.8rem;
+}
+
+.motto__img {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 300px;
+  width: 100%;
+  background-image: url(../img/pasja.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.motto__img::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  min-height: 300px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+.motto__img p {
+  padding: 1em;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.footer {
+  background-color: #333;
+}
+.footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+}
+.footer__menu__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.footer__menu__contact__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+.footer__menu__contact h3 {
+  margin-bottom: 0.5em;
+  font-size: 2.4rem;
+  color: #fff;
+}
+.footer__menu__contact a {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 5px 0;
+}
+.footer__menu__contact__adres {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2em;
+}
+.footer__menu__contact__adres p {
+  font-size: 1.8rem;
+  color: #fff;
+}
+.footer__menu__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2em;
+}
+.footer__menu__icon a {
+  margin: 1rem;
+  color: #fff;
+  font-size: 1.8rem;
+}
+.footer__menu__icon a .fa-brands {
+  font-size: 3rem;
+}
+.footer__maps iframe {
+  margin: 1rem 0;
+  width: 100%;
+}
+.footer__copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 0;
+}
+.footer__copyright p {
+  font-size: 1.6rem;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
