@@ -27,33 +27,50 @@
 <body>
 
     <nav class="nav">
-        <div class="nav__logo">
-            <img src="./img/logo.png" alt="Logo firmy carkom, czerny rusunek auta z nazwą firmy">
+        <div class="wrapper">
+            <div class="nav__logo ">
+                <img src="./img/logo.png" alt="Logo firmy carkom, czerny rusunek auta z nazwą firmy">
+            </div>
+            <div class="nav__icons">
+                <i class="fa-solid fa-bars nav__icons__element"></i>
+                <i class="fa-solid fa-x nav__icons__element nav__icons__element-hide"></i>
+            </div>
+            <div class="nav__menu">
+                <a href="#header" class="nav__menu__item">O nas</a>
+                <a href="#oferts" class="nav__menu__item">Oferty</a>
+                <a href="#contact" class="nav__menu__item">Kontakt</a>
+            </div>
         </div>
-        <div class="nav__icons">
-            <i class="fa-solid fa-bars nav__icons__element"></i>
-            <i class="fa-solid fa-x nav__icons__element nav__icons__element-hide"></i>
-        </div>
-        <div class="nav__menu">
-            <a href="#" class="nav__menu__item">O nas</a>
-            <a href="#" class="nav__menu__item">Oferty</a>
-            <a href="#" class="nav__menu__item">Kontakt</a>
-        </div>
+
+
     </nav>
 
-    <header class="header">
-        <div class="header__title">
-            <h2>O nas</h2>
+    <header id="header" class="header wrapper">
+        <div class="header__img">
+            <div class="header__title">
+                <h2>O nas</h2>
+                <div class="header__text--large">
+                    <p>Jesteśmy profesjonalną firmą specjalizującą się w przeróbkach świateł, nawigacji, poduszek
+                        powietrznych
+                        oraz naprawie kluczyków do samochodów. Nasze doświadczenie i wysoka jakość usług sprawiają, że
+                        jesteśmy
+                        liderem w naszej branży. </p>
+                </div>
+            </div>
         </div>
-        <div class=" wrapper header__text">
+
+        <div class="header__text">
             <p>Jesteśmy profesjonalną firmą specjalizującą się w przeróbkach świateł, nawigacji, poduszek powietrznych
                 oraz naprawie kluczyków do samochodów. Nasze doświadczenie i wysoka jakość usług sprawiają, że jesteśmy
                 liderem w naszej branży. </p>
         </div>
+
+
+
     </header>
 
     <main>
-        <section class="oferts">
+        <section id="oferts" class="oferts wrapper">
             <div class="oferts__title">
                 <h2>Usługi</h2>
             </div>
@@ -109,7 +126,7 @@
             </div>
         </section>
 
-        <section class="motto">
+        <section class="motto wrapper">
             <div class="motto__img">
                 <p>Twoje światła, nasza obsesja! Skontaktuj się z nami już teraz i odzyskaj blask swoich świateł
                     samochodowych!</p>
@@ -117,9 +134,9 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="wrapper footer__menu">
+    <footer id="contact" class="footer">
 
+        <div class="footer__menu wrapper">
             <div class="footer__menu__contact">
 
                 <div class="footer__menu__contact__number">
@@ -133,8 +150,6 @@
                     <p>ul. Folwarczna 17 Pysznica - Poland</p>
                 </div>
 
-                
-
             </div>
 
             <div class="footer__menu__icon">
@@ -143,15 +158,19 @@
             </div>
 
         </div>
-        <div class="footer__maps">
+
+
+        <div class="footer__maps wrapper">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1266.9597808254127!2d22.1068483!3d50.5728596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d2caac2b51fa7%3A0x195b42b6575af380!2sCARKOM.PL!5e0!3m2!1spl!2spl!4v1705778222477!5m2!1spl!2spl"
                 height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+
         <div class="footer__copyright">
             <p>company copyright 2023</p>
         </div>
+
     </footer>
 
     <script src="./script.js"></script>

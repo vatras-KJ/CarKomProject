@@ -18,10 +18,28 @@ html {
   max-width: 1200px;
 }
 
+h2 {
+  color: #fff;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  z-index: 1;
+}
+
+h3 {
+  color: #fff;
+}
+
 a {
   text-decoration: none;
+  color: #fff;
+  font-size: 1.8rem;
   cursor: pointer;
-  color: #000;
+}
+
+p {
+  color: #fff;
+  font-size: 1.8rem;
 }
 
 .nav {
@@ -29,19 +47,10 @@ a {
   min-width: 100%;
   background-color: #fff;
   z-index: 100;
-}
-.nav__wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-shadow: 0px 0px 24px 0px rgb(51, 51, 51);
+          box-shadow: 0px 0px 24px 0px rgb(51, 51, 51);
 }
 .nav__logo {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,11 +60,12 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 .nav__logo img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 315px;
+  width: 270px;
 }
 .nav__icons {
   display: -webkit-box;
@@ -67,13 +77,14 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #333;
+  background-color: #fff;
+  border-bottom: 1px solid #333;
 }
 .nav__icons__element {
   margin-right: 1em;
   padding: 0.5em;
   font-size: 3.2rem;
-  color: #fff;
+  color: #333;
   cursor: pointer;
 }
 .nav__icons__element-hide {
@@ -81,7 +92,7 @@ a {
 }
 .nav__menu {
   position: absolute;
-  top: 194px;
+  top: 175px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,8 +100,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  min-height: calc(100vh - 194px);
+  min-height: 100vh;
   background-color: #333;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -113,15 +127,13 @@ a {
   cursor: pointer;
 }
 .nav__menu__item:hover {
-  color: #333;
+  color: #cf3e2a;
 }
 
 .header {
-  position: relative;
-  padding-top: 19.4rem;
+  padding-top: 17.4rem;
 }
-.header__title {
-  position: relative;
+.header__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,36 +143,38 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 200px;
+  position: relative;
+  min-height: 200px;
   width: 100%;
   background-image: url(../img/header.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.header__title h2 {
-  color: #fff;
-  font-size: 4rem;
-  text-transform: uppercase;
-  z-index: 1;
-}
-.header__title::after {
+.header__img::after {
   position: absolute;
   top: 0;
   left: 0;
   content: "";
-  height: 200px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 0;
+}
+.header__title {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.header__text--large {
+  display: none;
 }
 .header__text p {
   margin: 1em;
-  font-size: 1.8rem;
+  color: #333;
 }
 
 .oferts__title {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,6 +184,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   height: 200px;
   width: 100%;
   background-image: url(../img/oferts.jpg);
@@ -177,19 +192,13 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.oferts__title h2 {
-  color: #fff;
-  font-size: 4rem;
-  text-transform: uppercase;
-  z-index: 1;
-}
 .oferts__title::after {
   position: absolute;
   top: 0;
   left: 0;
   content: "";
-  height: 200px;
   width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
@@ -238,11 +247,10 @@ a {
 }
 .oferts__cards__element__text p {
   margin: 1em;
-  font-size: 1.8rem;
+  color: #333;
 }
 
 .motto__img {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,6 +260,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   height: 300px;
   width: 100%;
   background-image: url(../img/pasja.jpg);
@@ -264,8 +273,8 @@ a {
   top: 0;
   left: 0;
   content: "";
-  min-height: 300px;
   width: 100%;
+  min-height: 300px;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
@@ -273,11 +282,11 @@ a {
   padding: 1em;
   font-size: 3.2rem;
   font-weight: 500;
-  color: #ffffff;
   z-index: 1;
 }
 
 .footer {
+  margin-top: 5rem;
   background-color: #333;
 }
 .footer__menu {
@@ -294,20 +303,21 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 .footer__menu__contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin: 2rem;
 }
 .footer__menu__contact__number {
   display: -webkit-box;
@@ -317,17 +327,13 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 2em;
-  margin-bottom: 1em;
+  margin: 0 4rem 2rem 2rem;
 }
 .footer__menu__contact h3 {
   margin-bottom: 0.5em;
   font-size: 2.4rem;
-  color: #fff;
 }
 .footer__menu__contact a {
-  color: #fff;
-  font-size: 1.8rem;
   margin: 5px 0;
 }
 .footer__menu__contact__adres {
@@ -340,20 +346,14 @@ a {
           flex-direction: column;
   margin-left: 2em;
 }
-.footer__menu__contact__adres p {
-  font-size: 1.8rem;
-  color: #fff;
-}
 .footer__menu__icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 2em;
+  margin: 2em;
 }
 .footer__menu__icon a {
   margin: 1rem;
-  color: #fff;
-  font-size: 1.8rem;
 }
 .footer__menu__icon a .fa-brands {
   font-size: 3rem;
@@ -376,5 +376,224 @@ a {
 }
 .footer__copyright p {
   font-size: 1.6rem;
-  color: #fff;
+}
+
+@media (min-width: 576px) {
+  .nav .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .nav__logo img {
+    width: 200px;
+  }
+  .nav__icons {
+    display: none;
+  }
+  .nav__menu {
+    position: relative;
+    top: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: auto;
+    background-color: transparent;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .nav__menu__item {
+    margin: 0.8em;
+    font-size: 1.6rem;
+    color: #333;
+  }
+  .header {
+    padding-top: 82px;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    padding-top: 82px;
+  }
+  .header__img {
+    min-height: 400px;
+  }
+  .header__title {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .header__text--large {
+    display: inline-block;
+    padding: 2rem 0;
+    margin: 0;
+    width: 50%;
+    color: #fff;
+    font-size: 2.4rem;
+    z-index: 1;
+    letter-spacing: 3px;
+  }
+  .header__text {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .nav .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .nav__logo img {
+    width: 200px;
+  }
+  .nav__icons {
+    display: none;
+  }
+  .nav__menu {
+    position: relative;
+    top: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    min-height: auto;
+    background-color: transparent;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .nav__menu__item {
+    font-size: 1.6rem;
+    color: #333;
+  }
+  .header {
+    padding-top: 82px;
+  }
+  .header__img {
+    min-height: 400px;
+  }
+  .header__title {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .header__text--large {
+    display: inline-block;
+    margin: 0;
+    width: 50%;
+    color: #fff;
+    font-size: 2.4rem;
+    z-index: 1;
+    letter-spacing: 5px;
+  }
+  .header__text {
+    display: none;
+  }
+  .oferts {
+    background-color: #fff;
+  }
+  .oferts__title {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 400px;
+    width: 100%;
+    background-image: url(../img/oferts.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .oferts__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    height: 60rem;
+  }
+  .oferts__cards__element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 3rem 0;
+    width: 30%;
+    height: 80%;
+    border-radius: 8px;
+    -webkit-box-shadow: 8px 8px 24px 0px rgb(51, 51, 51);
+            box-shadow: 8px 8px 24px 0px rgb(51, 51, 51);
+    letter-spacing: 2px;
+  }
+  .footer__menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer__menu__contact__number {
+    margin-right: 4rem;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .footer__maps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }/*# sourceMappingURL=style.css.map */

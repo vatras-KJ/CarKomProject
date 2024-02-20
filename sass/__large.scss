@@ -1,0 +1,114 @@
+@media (min-width: 992px) {
+	.nav {
+		& .wrapper {
+			display: flex; 
+		}
+
+		&__logo {
+			justify-content: flex-start; 
+
+			& img {
+				width: 200px; 
+			}
+		}
+
+		&__icons {
+			display: none; 
+		}
+
+		&__menu {
+			position: relative; 
+			top: 0; 
+			flex-direction: row; 
+			align-items: center; 
+			justify-content: flex-end; 
+			min-height: auto; 
+			background-color: transparent; 
+			transform: translateX(0); 
+			opacity: 1; 
+			transition: none; 
+
+			&__item {
+				font-size: 1.6rem; 
+				color: #333; 
+			}
+		}
+	}
+
+	.header {
+		padding-top: 82px; 
+
+		&__img {
+			min-height: 400px; 
+		}
+
+		&__title {
+			justify-content: space-around; 
+		}
+
+		&__text--large {
+			
+			display: inline-block;
+			margin: 0;
+			width: 50%;
+			color: #fff;
+			font-size: 2.4rem;
+			z-index: 1;
+			letter-spacing: 5px;
+		}
+
+		&__text {
+			display: none; 
+		}
+	}
+
+	.oferts {
+		
+		background-color: $mainColor;
+
+		&__title {
+			position: relative;
+			@include fccc;
+			min-height: 400px;
+			width: 100%;
+			background-image: url(../img/oferts.jpg);
+			@include imgCover;
+		}
+
+		&__cards {
+			@include fd(row);
+			@include fJcAi(space-evenly, stretch);
+			height: 60rem;
+
+			&__element {
+				@include fd(column);
+				background-color: rgba(255, 255, 255, 0.9);
+				margin: 3rem 0;
+				width: 30%;
+				height: 80%;
+				border-radius: 8px;
+				box-shadow: 8px 8px 24px 0px rgb(51, 51, 51);
+				letter-spacing: 2px;
+			}
+		}
+	}
+
+	.footer {
+		&__menu {
+			flex-direction: row; 
+			justify-content: space-around; 
+
+			&__contact {
+				&__number {
+					margin-right: 4rem; 
+					margin-left: 0; 
+					margin-bottom: 0; 
+				}
+			}
+		}
+
+		&__maps {
+			@include frcc;
+		}
+	}
+}

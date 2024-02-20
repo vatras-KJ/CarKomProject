@@ -1,0 +1,89 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+$mainColor: #fff;
+$secondColor: #333;
+$thirdColor: #cf3e2a;
+$mainText: #fff;
+$secondText: #333;
+
+@mixin aContent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 100%;
+}
+
+// flex row center (JC) center (AI)
+@mixin frcc {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// flex column center (JC) center (AI)
+@mixin fccc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+// flex & direction
+@mixin fd ($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+//flex justify-content & align-items
+@mixin fJcAi ($justify, $align) {
+    justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin imgCover {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+html {
+	font-family: 'Bebas Neue';
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+h2 {
+	color: $mainText;
+	font-size: 4rem;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	z-index: 1;
+}
+
+h3 {
+	color: $mainText;
+}
+
+a {
+	text-decoration: none;
+	color: $mainText;
+	font-size: 1.8rem;
+	cursor: pointer;
+}
+
+p {
+	color: $mainText;
+	font-size: 1.8rem;
+}

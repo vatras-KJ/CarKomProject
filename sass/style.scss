@@ -1,73 +1,33 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-// $mainColorBg: #df3520;
-$mainColorBg: #333;
-$secondColorBg: #fff;
-$red: #cf3e2a;
-$red: #333;
-$black: #000;
-$white: #fff;
-
-html {
-	font-family: 'Bebas Neue';
-	font-family: 'Montserrat', sans-serif;
-	scroll-behavior: smooth;
-	font-size: 62.5%;
-}
-
-.wrapper {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1200px;
-}
-
-a {
-	text-decoration: none;
-	cursor: pointer;
-	color: $black;
-}
+@import './_components';
 
 .nav {
 	position: fixed;
 	min-width: 100%;
-	background-color: $white;
+	background-color: $mainColor;
 	z-index: 100;
-
-	&__wrapper {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		// align-items: center;
-		// justify-content: space-between;
-	}
+	box-shadow: 0px 0px 24px 0px rgb(51, 51, 51);
 
 	&__logo {
+		@include frcc;
 		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 
 		& img {
 			object-fit: cover;
-			width: 315px;
+			width: 270px;
 		}
 	}
 
 	&__icons {
 		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		background-color: $red;
+		@include fJcAi(flex-end, center);
+		background-color: $mainColor;
+		border-bottom: 1px solid #333;
 
 		&__element {
 			margin-right: 1em;
 			padding: 0.5em;
 			font-size: 3.2rem;
-			color: #fff;
+			color: $secondColor;
 			cursor: pointer;
 
 			&-hide {
@@ -78,12 +38,12 @@ a {
 
 	&__menu {
 		position: absolute;
-		top: 194px;
-		display: flex;
-		flex-direction: column;
+		top: 175px;
+		@include fd(column);
+		align-items: center;
 		width: 100%;
-		min-height: calc(100vh - 194px);
-		background-color: $red;
+		min-height: 100vh;
+		background-color: $secondColor;
 		transform: translateX(-100%);
 		opacity: 0;
 		transition: transform 0.3s, opacity 0.3s;
@@ -97,115 +57,87 @@ a {
 			margin: 0.8em;
 			font-size: 2.6rem;
 			font-weight: bold;
-			color: #fff;
+			color: $mainText;
 			cursor: pointer;
 
 			&:hover {
-				color: #333;
+				color: $thirdColor;
 			}
 		}
 	}
 }
 
 .header {
-	position: relative;
-	padding-top: 19.4rem;
+	padding-top: 17.4rem;
 
-	&__title {
+	&__img {
+		@include frcc;
 		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 200px;
+		min-height: 200px;
 		width: 100%;
 		background-image: url(../img/header.jpg);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-
-		& h2 {
-			color: #fff;
-			font-size: 4rem;
-			text-transform: uppercase;
-			z-index: 1;
-		}
+		@include imgCover;
 
 		&::after {
-			position: absolute;
-			top: 0;
-			left: 0;
-			content: '';
-			height: 200px;
-			width: 100%;
-			background-color: rgba(0, 0, 0, 0.4);
+			@include aContent;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
 			z-index: 0;
 		}
 	}
 
+	&__title {
+		position: relative;
+		text-align: center;
+		z-index: 1;
+	}
+
+	&__text--large {
+		display: none;
+	}
+
 	&__text p {
 		margin: 1em;
-		font-size: 1.8rem;
+		color: $secondColor;
 	}
 }
 
 .oferts {
 	&__title {
+		@include frcc;
 		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		height: 200px;
 		width: 100%;
 		background-image: url(../img/oferts.jpg);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-
-		& h2 {
-			color: #fff;
-			font-size: 4rem;
-			text-transform: uppercase;
-			z-index: 1;
-		}
+		@include imgCover;
 
 		&::after {
-			position: absolute;
-			top: 0;
-			left: 0;
-			content: '';
-			height: 200px;
-			width: 100%;
+			@include aContent;
+			height: 100%;
 			background-color: rgba(0, 0, 0, 0.4);
 			z-index: 0;
 		}
 	}
 
 	&__cards {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		@include fccc;
 
 		&__element {
 			&__title {
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				@include frcc;
 
 				& h3 {
 					margin-top: 2rem;
 					font-size: 3rem;
 					text-transform: uppercase;
-					color: $red;
+					color: $secondText;
 				}
 			}
 			&__text {
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				@include frcc;
 				& p {
 					margin: 1em;
-					font-size: 1.8rem;
+					color: $secondText;
 				}
 			}
 		}
@@ -214,24 +146,16 @@ a {
 
 .motto {
 	&__img {
+		@include frcc;
 		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		height: 300px;
 		width: 100%;
 		background-image: url(../img/pasja.jpg);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		@include imgCover;
 
 		&::after {
-			position: absolute;
-			top: 0;
-			left: 0;
-			content: '';
+			@include aContent;
 			min-height: 300px;
-			width: 100%;
 			background-color: rgba(0, 0, 0, 0.6);
 			z-index: 0;
 		}
@@ -240,67 +164,50 @@ a {
 			padding: 1em;
 			font-size: 3.2rem;
 			font-weight: 500;
-			color: #ffffff;
 			z-index: 1;
 		}
 	}
 }
 
 .footer {
-	background-color: $red;
+	margin-top: 5rem;
+	background-color: $secondColor;
 
 	&__menu {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 2rem 0;
+		@include fccc;
+		padding: 3rem 0;
 
 		&__contact {
 			display: flex;
-			justify-content: flex-start;
-			align-items: flex-start;
 			flex-wrap: wrap;
+			@include fJcAi(flex-start, flex-start);
+			margin: 2rem;
 
 			&__number {
-				display: flex;
-				flex-direction: column;
-				margin-left: 2em;
-				margin-bottom: 1em;
+				@include fd(column);
+				margin: 0 4rem 2rem 2rem;
 			}
 
 			& h3 {
-				margin-bottom: .5em;
+				margin-bottom: 0.5em;
 				font-size: 2.4rem;
-				color: #fff;
 			}
 			& a {
-				color: #fff;
-				font-size: 1.8rem;
 				margin: 5px 0;
 			}
 
 			&__adres {
-				display: flex;
-				flex-direction: column;
+				@include fd(column);
 				margin-left: 2em;
-		
-
-				& p {
-					font-size: 1.8rem;
-					color: #fff;
-				}
 			}
 		}
 
 		&__icon {
 			display: flex;
-			margin-top: 2em;
+			margin: 2em;
 
 			& a {
 				margin: 1rem;
-				color: #fff;
-				font-size: 1.8rem;
 
 				& .fa-brands {
 					font-size: 3rem;
@@ -317,13 +224,15 @@ a {
 	}
 
 	&__copyright {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include frcc;
 		padding: 1em 0;
+
 		& p {
 			font-size: 1.6rem;
-			color: #fff;
 		}
 	}
 }
+
+@import './_small';
+@import './_medium';
+@import './_large';

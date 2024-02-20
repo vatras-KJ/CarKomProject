@@ -1,0 +1,32 @@
+@media (min-width: 768px) {
+
+
+
+    .header {
+		padding-top: 82px; 
+
+		&__img {
+			min-height: 400px; 
+		}
+
+		&__title {
+			justify-content: space-around; 
+		}
+
+		&__text--large {
+			display: inline-block;
+			padding: 2rem 0;
+			margin: 0;
+			width: 50%;
+			color: $mainText;
+			font-size: 2.4rem;
+			z-index: 1;
+			letter-spacing: 3px;
+		}
+
+		&__text {
+			display: none; 
+		}
+	}
+
+}
