@@ -13,35 +13,42 @@
 
 		& img {
 			object-fit: cover;
-			width: 270px;
+			width: 220px;
 		}
 	}
 
-	&__icons {
+	&__menu__btn {
 		display: flex;
 		@include fJcAi(flex-end, center);
+		padding-bottom: 1em;
 		background-color: $mainColor;
 		border-bottom: 1px solid #333;
 
-		&__element {
+		&-element {
 			margin-right: 1em;
-			padding: 0.5em;
-			font-size: 3.2rem;
-			color: $secondColor;
+			padding: 0.3em 0.5em;
+			font-size: 2rem;
+			background-color: transparent;
+			border: 1px solid $thirdColor;
+			border-radius: 12px;
+			color: $secondText;
+			transition: background-color 0.3s;
+			transform-origin: 0;
 			cursor: pointer;
 
-			&-hide {
-				display: none;
+			&:hover {
+				background-color: $thirdColor;
+				color: $mainText;
 			}
 		}
 	}
 
 	&__menu {
 		position: absolute;
-		top: 175px;
+		top: 0;
 		@include fd(column);
 		align-items: center;
-		width: 100%;
+		min-width: 100%;
 		min-height: 100vh;
 		background-color: $secondColor;
 		transform: translateX(-100%);
@@ -55,7 +62,7 @@
 
 		&__item {
 			margin: 0.8em;
-			font-size: 2.6rem;
+			font-size: 2.2rem;
 			font-weight: bold;
 			color: $mainText;
 			cursor: pointer;
@@ -63,42 +70,86 @@
 			&:hover {
 				color: $thirdColor;
 			}
+
+			&:first-child {
+				margin-top: 40px;
+			}
+		}
+
+		&__btn-open {
+			min-width: 100%;
+			display: flex;
+			@include fJcAi(flex-end, center);
+			padding: 2em;
+
+			&-el {
+				color: $mainText;
+			}
+		}
+
+		&-large {
+			display: none;
 		}
 	}
 }
 
 .header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 	padding-top: 17.4rem;
+	margin-bottom: 4rem;
+	background-image: url(../img/header.jpg);
+	@include imgCover;
+	width: 100%;
+	min-height: 100vh;
 
-	&__img {
-		@include frcc;
-		position: relative;
-		min-height: 200px;
-		width: 100%;
-		background-image: url(../img/header.jpg);
-		@include imgCover;
-
-		&::after {
-			@include aContent;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.7);
-			z-index: 0;
-		}
+	&::after {
+		@include aContent;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: 0;
 	}
 
 	&__title {
+		@include fd(column);
+		@include fJcAi(flex-start, center);
 		position: relative;
 		text-align: center;
 		z-index: 1;
+
+		& h2 {
+			margin: 2rem;
+		}
 	}
 
-	&__text--large {
-		display: none;
+	&__text {
+		display: inline-block;
+		margin: 4rem 20px;
+		color: $mainText;
+		font-size: 2rem;
+		z-index: 1;
+		letter-spacing: 3px;
 	}
 
-	&__text p {
-		margin: 1em;
-		color: $secondColor;
+	&__btn {
+		margin-top: 10%;
+		padding: 1em;
+		width: 50%;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		color: $mainText;
+		background-color: transparent;
+		border: 1px solid $thirdColor;
+		border-radius: 12px;
+		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: $thirdColor;
+			color: $mainText;
+		}
 	}
 }
 
@@ -121,8 +172,20 @@
 
 	&__cards {
 		@include fccc;
+		background-color: #ddd;
 
 		&__element {
+			margin: 1rem 2rem;
+			background-color: #fff;
+			border-radius: 12px;
+
+			&:first-child {
+				margin-top: 40px;
+			}
+			&:last-child {
+				margin-bottom: 40px;
+			}
+
 			&__title {
 				@include frcc;
 
@@ -140,6 +203,45 @@
 					color: $secondText;
 				}
 			}
+		}
+	}
+}
+
+.idea__section {
+	margin: 4rem 0;
+	background-color: $secondColor;
+}
+
+.idea {
+	@include fccc;
+	flex-direction: column;
+	padding: 4rem 2rem;
+	height: 100%;
+	background-color: transparent;
+
+	&__photo {
+		@include fccc;
+		order: 2;
+
+		& img {
+			margin: 2rem;
+			width: 100%;
+			border-radius: 12px;
+		}
+	}
+
+	&__area {
+		align-self: start;
+		text-align: center;
+		order: 1;
+
+		& p {
+			margin-bottom: 2rem;
+			padding: 2rem;
+		}
+
+		& a {
+			font-size: 6rem;
 		}
 	}
 }
@@ -162,7 +264,7 @@
 
 		& p {
 			padding: 1em;
-			font-size: 3.2rem;
+			font-size: 2.4rem;
 			font-weight: 500;
 			z-index: 1;
 		}
@@ -170,50 +272,62 @@
 }
 
 .footer {
-	margin-top: 5rem;
+	margin-top: 4rem;
 	background-color: $secondColor;
 
 	&__menu {
 		@include fccc;
-		padding: 3rem 0;
+		padding-top: 2rem;
 
 		&__contact {
-			display: flex;
-			flex-wrap: wrap;
+			@include fd(column);
 			@include fJcAi(flex-start, flex-start);
-			margin: 2rem;
+			gap: 4rem;
+
+			& h3 {
+				font-size: 2rem;
+			}
 
 			&__number {
 				@include fd(column);
-				margin: 0 4rem 2rem 2rem;
-			}
 
-			& h3 {
-				margin-bottom: 0.5em;
-				font-size: 2.4rem;
-			}
-			& a {
-				margin: 5px 0;
+				& .contact-link {
+					transition: color 0.3s;
+					&:hover {
+						color: $thirdColor;
+					}
+				}
 			}
 
 			&__adres {
 				@include fd(column);
-				margin-left: 2em;
 			}
 		}
 
 		&__icon {
 			display: flex;
-			margin: 2em;
+			margin: 2rem;
 
-			& a {
-				margin: 1rem;
-
+			& .contact-element {
+				margin: 0.5em;
+				padding: 0.5em;
 				& .fa-brands {
 					font-size: 3rem;
 				}
+
+				&:first-child {
+					transition: color 0.3s;
+
+					&:hover {
+						color: rgb(63, 63, 226);
+					}
+				}
 			}
 		}
+	}
+
+	.contact-element {
+		margin: 0.8rem;
 	}
 
 	&__maps {
@@ -224,11 +338,18 @@
 	}
 
 	&__copyright {
-		@include frcc;
-		padding: 1em 0;
+		@include fd(column);
+		@include fJcAi(space-evenly, center);
+		padding: 2rem;
 
 		& p {
 			font-size: 1.6rem;
+
+			&:last-child {
+				margin: .5em;
+				font-size: 1.2rem;
+				color: #ffffff91;
+			}
 		}
 	}
 }

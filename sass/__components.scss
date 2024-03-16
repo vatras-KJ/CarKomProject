@@ -5,10 +5,10 @@
 }
 
 $mainColor: #fff;
-$secondColor: #333;
+$secondColor: #292929;
 $thirdColor: #cf3e2a;
 $mainText: #fff;
-$secondText: #333;
+$secondText: #292929;
 
 @mixin aContent {
 	position: absolute;
@@ -21,6 +21,7 @@ $secondText: #333;
 // flex row center (JC) center (AI)
 @mixin frcc {
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
@@ -34,14 +35,14 @@ $secondText: #333;
 }
 
 // flex & direction
-@mixin fd ($direction) {
-    display: flex;
-    flex-direction: $direction;
+@mixin fd($direction) {
+	display: flex;
+	flex-direction: $direction;
 }
 
 //flex justify-content & align-items
-@mixin fJcAi ($justify, $align) {
-    justify-content: $justify;
+@mixin fJcAi($justify, $align) {
+	justify-content: $justify;
 	align-items: $align;
 }
 
@@ -55,7 +56,12 @@ html {
 	font-family: 'Bebas Neue';
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
+	scroll-padding-top: 150px;
 	font-size: 62.5%;
+}
+
+body {
+	background-color: #ddd;
 }
 
 .wrapper {
@@ -86,4 +92,11 @@ a {
 p {
 	color: $mainText;
 	font-size: 1.8rem;
+}
+
+.youtube__icon {
+	transition: color 0.3s;
+	&:hover {
+		color: $thirdColor;
+	}
 }

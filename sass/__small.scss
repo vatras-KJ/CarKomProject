@@ -14,11 +14,12 @@
 			}
 		}
 	
-		&__icons {
+		&__menu__btn {
 			display: none; 
 		}
 	
 		&__menu {
+			display: none;
 			position: relative; 
 			top: 0; 
 			flex-direction: row; 
@@ -33,12 +34,34 @@
 				margin: 0.8em;
 				font-size: 1.6rem; 
 				color: $secondText; 
+
+				&:first-child {
+					margin: 0.8em;
+				}
+			}
+
+			&-large{
+			position: relative; 
+			top: 0; 
+			@include fd(row);
+			@include fJcAi (flex-end, center);
+			width: 100%; 
+			min-height: auto; 
+			background-color: transparent; 
 			}
 		}
 	}
 
 	.header {
 		padding-top: 82px;  
+	}
+
+	.motto {
+		&__img {
+			& p {
+				font-size: 2.6rem;
+			}
+		}
 	}
 
 
