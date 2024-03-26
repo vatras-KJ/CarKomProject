@@ -15,7 +15,10 @@
 		}
 	
 		&__menu__btn {
-			display: none; 
+			// display: none; 
+			&-element {
+				display: none; 
+			}
 		}
 	
 		&__menu {

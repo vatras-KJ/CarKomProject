@@ -9,7 +9,7 @@ html {
   font-family: "Bebas Neue";
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
-  scroll-padding-top: 150px;
+  scroll-padding-top: 86px;
   font-size: 62.5%;
 }
 
@@ -67,36 +67,19 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
 }
 .nav__logo img {
+  padding: 2rem;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 220px;
-}
-.nav__menu__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-bottom: 1em;
-  background-color: #fff;
-  border-bottom: 1px solid #333;
+  width: 150px;
 }
 .nav__menu__btn-element {
   margin-right: 1em;
@@ -412,11 +395,16 @@ p {
           order: 1;
 }
 .idea__area p {
-  margin-bottom: 2rem;
   padding: 2rem;
 }
 .idea__area a {
+  margin: 2rem 0;
   font-size: 6rem;
+}
+.idea__area p:last-child {
+  padding: 0.5em;
+  color: #cf3e2a;
+  text-transform: uppercase;
 }
 
 .motto__img {
@@ -459,10 +447,21 @@ p {
 }
 
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 4rem;
+  padding-top: 4rem;
   background-color: #292929;
 }
 .footer__menu {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -522,34 +521,46 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.footer__menu__icon {
+.footer__menu__society {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0;
 }
-.footer__menu__icon .contact-element {
-  margin: 0.5em;
-  padding: 0.5em;
-}
-.footer__menu__icon .contact-element .fa-brands {
+.footer__menu__society-link .fa-brands {
+  margin: 0.2em;
   font-size: 3rem;
 }
-.footer__menu__icon .contact-element:first-child {
+.footer__menu__society .contact-element:first-child {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
-.footer__menu__icon .contact-element:first-child:hover {
+.footer__menu__society .contact-element:first-child:hover {
   color: rgb(63, 63, 226);
 }
 .footer .contact-element {
   margin: 0.8rem;
+}
+.footer__maps {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 .footer__maps iframe {
   margin: 1rem 0;
   width: 100%;
 }
 .footer__copyright {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -588,7 +599,7 @@ p {
   .nav__logo img {
     width: 200px;
   }
-  .nav__menu__btn {
+  .nav__menu__btn-element {
     display: none;
   }
   .nav__menu {
@@ -786,24 +797,19 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .footer__menu__icon {
+  .footer__menu__society {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 2rem;
   }
-  .footer__menu__icon .contact-element {
-    margin: 0.5em;
-    padding: 0.5em;
-  }
-  .footer__menu__icon .contact-element .fa-brands {
+  .footer__menu__society .contact-element .fa-brands {
     font-size: 3rem;
   }
-  .footer__menu__icon .contact-element:first-child {
+  .footer__menu__society .contact-element:first-child {
     -webkit-transition: color 0.3s;
     transition: color 0.3s;
   }
-  .footer__menu__icon .contact-element:first-child:hover {
+  .footer__menu__society .contact-element:first-child:hover {
     color: rgb(63, 63, 226);
   }
 }

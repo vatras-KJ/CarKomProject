@@ -94,13 +94,14 @@
 				}
 			}
 
-			&__icon {
+			// __icon
+			&__society {
 				display: flex;
-				margin: 2rem;
+				// margin: 2rem;
 
 				& .contact-element {
-					margin: 0.5em;
-					padding: 0.5em;
+					// margin: 0.5em;
+					// padding: 0.5em;
 					& .fa-brands {
 						font-size: 3rem;
 					}
