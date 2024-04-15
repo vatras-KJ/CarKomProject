@@ -1,4 +1,4 @@
-@import './_components';
+@use './_components' as *;
 
 .nav {
 	position: fixed;
@@ -20,12 +20,6 @@
 	}
 
 	&__menu__btn {
-		// display: flex;
-		// @include fJcAi(flex-end, center);
-		// padding-bottom: 1em;
-		// background-color: $mainColor;
-		// border-bottom: 1px solid #333;
-
 		&-element {
 			margin-right: 1em;
 			padding: 0.3em 0.5em;
@@ -102,7 +96,7 @@
 	position: relative;
 	padding-top: 17.4rem;
 	margin-bottom: 4rem;
-	background-image: url(../img/header.jpg);
+	background-image: url(../../dist/img/header.jpg);
 	@include imgCover;
 	width: 100%;
 	min-height: 100vh;
@@ -161,7 +155,7 @@
 		position: relative;
 		height: 200px;
 		width: 100%;
-		background-image: url(../img/oferts.jpg);
+		background-image: url(../../dist/img/oferts.jpg);
 		@include imgCover;
 
 		&::after {
@@ -260,7 +254,7 @@
 		position: relative;
 		height: 300px;
 		width: 100%;
-		background-image: url(../img/pasja.jpg);
+		background-image: url(../../dist/img/pasja.jpg);
 		@include imgCover;
 
 		&::after {
@@ -316,17 +310,13 @@
 			}
 		}
 
-		// &__icon
 		&__society {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
 			margin: 0;
-			// margin: 2rem;
 
 			&-link {
-				// margin: 0.5em;
-
 				& .fa-brands {
 					margin: 0.2em;
 					font-size: 3rem;
@@ -334,12 +324,6 @@
 			}
 
 			& .contact-element {
-				// margin: 0.5em;
-				// padding: 0.5em;
-				// & .fa-brands {
-				// 	font-size: 3rem;
-				// }
-
 				&:first-child {
 					transition: color 0.3s;
 
