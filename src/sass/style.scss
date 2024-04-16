@@ -112,11 +112,18 @@
 		@include fd(column);
 		@include fJcAi(flex-start, center);
 		position: relative;
+		padding: 1rem;
 		text-align: center;
 		z-index: 1;
 
-		& h2 {
-			margin: 2rem;
+		& p {
+			margin: 1rem;
+			font-size: 2rem;
+		}
+
+		& h1 {
+			font-size: 3.2rem;
+			color: $mainColor;
 		}
 	}
 
@@ -131,6 +138,7 @@
 
 	&__btn {
 		margin-top: 10%;
+		margin-bottom: 4rem;
 		padding: 1em;
 		width: 50%;
 		font-size: 1.5rem;
@@ -164,6 +172,14 @@
 			background-color: rgba(0, 0, 0, 0.4);
 			z-index: 0;
 		}
+
+		& p {
+			font-size: 3.2rem;
+			font-weight: bold;
+			color: $mainColor;
+			text-transform: uppercase;
+			z-index: 100;
+		}
 	}
 
 	&__cards {
@@ -185,10 +201,12 @@
 			&__title {
 				@include frcc;
 
-				& h3 {
+				& h2 {
 					margin-top: 2rem;
-					font-size: 3rem;
+					font-size: 1.6rem;
+					text-align: center;
 					text-transform: uppercase;
+					letter-spacing: 5px;
 					color: $secondText;
 				}
 			}
@@ -227,9 +245,17 @@
 	}
 
 	&__area {
-		align-self: start;
+		@include fccc;
+		padding: 0 1rem;
 		text-align: center;
 		order: 1;
+
+		& h3 {
+			font-size: 3rem;
+			font-weight: bold;
+			color: $mainColor;
+			text-transform: uppercase;
+		}
 
 		& p {
 			padding: 2rem;
@@ -241,7 +267,7 @@
 		}
 
 		& p:last-child {
-			padding: .5em;
+			padding: 0.5em;
 			color: $thirdColor;
 			text-transform: uppercase;
 		}
@@ -322,16 +348,6 @@
 					font-size: 3rem;
 				}
 			}
-
-			& .contact-element {
-				&:first-child {
-					transition: color 0.3s;
-
-					&:hover {
-						color: rgb(63, 63, 226);
-					}
-				}
-			}
 		}
 	}
 
@@ -357,7 +373,7 @@
 			font-size: 1.6rem;
 
 			&:last-child {
-				margin: .5em;
+				margin: 0.5em;
 				font-size: 1.2rem;
 				color: #ffffff91;
 			}

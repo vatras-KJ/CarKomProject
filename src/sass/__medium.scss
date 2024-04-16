@@ -41,14 +41,11 @@
 		}
 
 		&__area {
-			padding: 2rem;
+			justify-content: start;
+			padding: 0 2rem;
 			width: 50%;
 			height: 500px;
 			order: 2;
-
-			& h2 {
-				margin-bottom: 2rem;
-			}
 
 			& p {
 				font-size: 2rem;
@@ -65,7 +62,7 @@
 	.motto {
 		&__img {
 			& p {
-				font-size: 3.2rem;
+				font-size: 2.8rem;
 				letter-spacing: 4px;
 			}
 		}
@@ -94,24 +91,13 @@
 				}
 			}
 
-			// __icon
+
 			&__society {
 				display: flex;
-				// margin: 2rem;
 
 				& .contact-element {
-					// margin: 0.5em;
-					// padding: 0.5em;
 					& .fa-brands {
 						font-size: 3rem;
-					}
-
-					&:first-child {
-						transition: color 0.3s;
-
-						&:hover {
-							color: rgb(63, 63, 226);
-						}
 					}
 				}
 			}

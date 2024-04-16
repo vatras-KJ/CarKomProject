@@ -25,7 +25,7 @@
 			transition: none;
 
 			&__item {
-				font-size: 1.6rem;
+				font-size: 2rem;
 				color: #333;
 			}
 		}
@@ -52,12 +52,12 @@
 		background-color: $mainColor;
 
 		&__title {
-			position: relative;
 			@include fccc;
 			min-height: 400px;
-			width: 100%;
-			background-image: url(../img/oferts.jpg);
-			@include imgCover;
+
+			& p {
+				font-size: 4.8rem;
+			}
 		}
 
 		&__cards {
@@ -83,7 +83,7 @@
 				}
 
 				&__title {
-					& h3 {
+					& h2 {
 						font-size: 2.2rem;
 					}
 				}
@@ -98,6 +98,12 @@
 	}
 
 	.idea {
+		&__area {
+			& h3 {
+				font-size: 3.4rem;
+			}
+		}
+		
 		&__photo {
 			& img {
 				transition: transform 0.3s;

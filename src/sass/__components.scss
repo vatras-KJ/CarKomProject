@@ -70,14 +70,6 @@ body {
 	max-width: 1200px;
 }
 
-h2 {
-	color: $mainText;
-	font-size: 4rem;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	z-index: 1;
-}
-
 h3 {
 	color: $mainText;
 }
@@ -92,6 +84,13 @@ a {
 p {
 	color: $mainText;
 	font-size: 1.8rem;
+}
+
+.facebook__icon {
+	transition: color 0.3s;
+	&:hover {
+		color: rgb(63, 63, 226);
+	}
 }
 
 .youtube__icon {
