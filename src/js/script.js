@@ -21,3 +21,4 @@ const handleCurrentYear = () => {
 	footerYear.innerText = year
 }
 handleCurrentYear()
+AOS.init();

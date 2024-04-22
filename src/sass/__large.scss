@@ -103,34 +103,24 @@
 				font-size: 3.4rem;
 			}
 		}
-		
-		&__photo {
-			& img {
-				transition: transform 0.3s;
+	}
 
-				&:hover {
-					transform: scale(1.2);
+	.footer {
+		&__menu {
+			flex-direction: row;
+			justify-content: space-around;
+
+			&__contact {
+				&__number {
+					margin-right: 4rem;
+					margin-left: 0;
+					margin-bottom: 0;
 				}
 			}
 		}
 
-		.footer {
-			&__menu {
-				flex-direction: row;
-				justify-content: space-around;
-
-				&__contact {
-					&__number {
-						margin-right: 4rem;
-						margin-left: 0;
-						margin-bottom: 0;
-					}
-				}
-			}
-
-			&__maps {
-				@include frcc;
-			}
+		&__maps {
+			@include frcc;
 		}
 	}
 }
