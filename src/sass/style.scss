@@ -261,18 +261,18 @@
 			padding: 2rem;
 		}
 
-		& a {
-			margin: 2rem 0;
-			font-size: 6rem;
-		}
+		& a .icon {
+				width: 4rem;
+			}
+		} 
 
 		& p:last-child {
-			padding: 0.5em;
+			padding: 0;
 			color: $thirdColor;
 			text-transform: uppercase;
 		}
 	}
-}
+
 
 .motto {
 	&__img {
@@ -309,7 +309,7 @@
 	&__menu {
 		order: 2;
 		@include fccc;
-		padding-top: 2rem;
+		padding: 2rem;
 
 		&__contact {
 			@include fd(column);
@@ -341,18 +341,7 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			margin: 0;
-
-			&-link {
-				& .fa-brands {
-					margin: 0.2em;
-					font-size: 3rem;
-				}
-			}
 		}
-	}
-
-	.contact-element {
-		margin: 0.8rem;
 	}
 
 	&__maps {

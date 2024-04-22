@@ -52,9 +52,8 @@
 				letter-spacing: 2px;
 			}
 
-			& a {
-				margin-bottom: 2rem;
-				font-size: 8rem;
+			& a .icon {
+				width: 6rem;
 			}
 		}
 	}
@@ -90,7 +89,6 @@
 					@include fd(column);
 				}
 			}
-
 
 			&__society {
 				display: flex;

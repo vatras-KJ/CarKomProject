@@ -86,16 +86,12 @@ p {
 	font-size: 1.8rem;
 }
 
-.facebook__icon {
-	transition: color 0.3s;
-	&:hover {
-		color: rgb(63, 63, 226);
-	}
-}
+.icon {
+	margin: 0.8rem;
+	width: 3.5rem;
+	transition: transform .3s;
 
-.youtube__icon {
-	transition: color 0.3s;
 	&:hover {
-		color: $thirdColor;
+		transform: scale(1.1);
 	}
 }
